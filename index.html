@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.0.0/split.min.js" integrity="sha512-tTsZnBXEzNdEaqUO9Ok8fUofS73xieiBa54pD/sxOSvayIgItM9MmEM0CnUjA13LDnJT22sfwmjf20+Bo2174g==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="split-container">
+        <div class="editor-container">
+            <textarea id="htmlCode" placeholder="Type HTML code here" spellcheck="false" oninput="updateEditor(0)" onkeydown="handleTab(event)"></textarea>
+            <textarea id="cssCode" placeholder="Type CSS code here" spellcheck="false" oninput="updateEditor(0)" onkeydown="handleTab(event)"></textarea>
+            <textarea id="javascriptCode" placeholder="Type JavaScript code here" spellcheck="false" oninput="updateEditor(0)" onkeydown="handleTab(event)"></textarea>
+        </div>
+        <div class="iframe-container">
+            <iframe id="viewer"></iframe>
+        </div>
+    </div>
+</body>
+</html>
